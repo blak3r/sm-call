@@ -31,7 +31,7 @@ public class CallinizePush implements CustomCodeMethod {
 
   @Override
   public String getMethodName() {
-    return "hello_world";
+    return "callenize";
   }
 
   @Override
