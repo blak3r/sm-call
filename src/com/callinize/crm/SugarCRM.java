@@ -37,7 +37,8 @@ public class SugarCRM {
  * @throws URISyntaxException 
  * @throws HttpException 
    */
-  private String login() throws NoSuchAlgorithmException, IOException, URISyntaxException, HttpException {
+/*
+	private String login() throws NoSuchAlgorithmException, IOException, URISyntaxException, HttpException {
     // user your credentials
     String username = "admin";
     String password = "adF32wjkh";
@@ -80,17 +81,20 @@ public class SugarCRM {
         entity.getContent()));
     return (String) parse.get("id");
   }
+  */
   
   //https://github.com/mmarum-sugarcrm/sugarcrm-api-java/blob/master/sugar-api/src/test/java/com/sugarcrm/api/SugarClientTest.java
-  public void getBeanTest(){
+  public String getBeanTest(){
 	    SugarClient client = new SugarClient("http://sugar.alertus.com/sugarcrm");
 	    try{
 	      SugarSession session = client.getSugarSession(new SugarCredentials("admin", "adF32wjkh"));
 	      SugarBean bean = client.getBean(session, "Contacts", "0033000000YlMvqAAF");
 	      System.out.println( bean.get("first_name") + bean.get("last_name") );
+	      return bean.get("first_name") + bean.get("last_name");
 	    }catch(Exception e){
 	      e.printStackTrace();
-	    }
+	    } 
+	    return "ERROR";
   }
 	  
   
@@ -99,23 +103,7 @@ public class SugarCRM {
 	  SugarCRM s = new SugarCRM();
 	 
 	  s.getBeanTest();
-	  
-	  
-	  try {
-		System.out.println( s.login());
-	} catch (NoSuchAlgorithmException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	} catch (IOException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	} catch (URISyntaxException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	} catch (HttpException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+
 	  
   }
 }

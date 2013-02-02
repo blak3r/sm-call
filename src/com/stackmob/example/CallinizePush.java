@@ -16,19 +16,18 @@
 
 package com.stackmob.example;
 
+import com.stackmob.core.customcode.CustomCodeMethod;
+import com.stackmob.core.rest.ProcessedAPIRequest;
+import com.stackmob.core.rest.ResponseToProcess;
+import com.stackmob.sdkapi.SDKServiceProvider;
+
 import java.net.HttpURLConnection;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.callinize.crm.SugarCRM;
-import com.stackmob.core.customcode.CustomCodeMethod;
-import com.stackmob.core.rest.ProcessedAPIRequest;
-import com.stackmob.core.rest.ResponseToProcess;
-import com.stackmob.sdkapi.SDKServiceProvider;
-
-public class HelloWorld implements CustomCodeMethod {
+public class CallinizePush implements CustomCodeMethod {
 
   @Override
   public String getMethodName() {
@@ -44,7 +43,6 @@ public class HelloWorld implements CustomCodeMethod {
   public ResponseToProcess execute(ProcessedAPIRequest request, SDKServiceProvider serviceProvider) {
     Map<String, Object> map = new HashMap<String, Object>();
     map.put("msg", "Hello, world!");
-    map.put("ContactName",  new SugarCRM().getBeanTest() );
     return new ResponseToProcess(HttpURLConnection.HTTP_OK, map);
   }
 

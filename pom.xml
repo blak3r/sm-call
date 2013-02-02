@@ -48,7 +48,32 @@
       <artifactId>json-simple</artifactId>
       <version>1.1.1</version>
     </dependency>
-    <dependency>
+    	<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+	    	<artifactId>httpclient</artifactId>
+	    	<version>4.1.1</version>
+		</dependency>     
+		
+		 <dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+	    	<artifactId>httpmime</artifactId>
+	    	<version>4.1.1</version>
+		</dependency>  
+		     
+        <dependency>
+          <groupId>com.google.code.gson</groupId>
+          <artifactId>gson</artifactId>
+          <version>1.7.1</version>
+        </dependency>        
+        
+		<dependency>
+	      <groupId>org.testng</groupId>
+	      <artifactId>testng</artifactId>
+	      <version>6.0.1</version>
+	      <scope>test</scope>
+	    </dependency>
+	    <!-- 
+	        <dependency>
 		<groupId>org.apache.httpcomponents</groupId>
 		<artifactId>httpclient</artifactId>
 		<version>4.0-alpha4</version>
@@ -63,6 +88,7 @@
 		<artifactId>gson</artifactId>
 		<version>1.7.1</version>
 	</dependency>
+	-->
   </dependencies>
     
   <build>
