@@ -43,7 +43,7 @@ public class HelloWorld implements CustomCodeMethod {
   @Override
   public ResponseToProcess execute(ProcessedAPIRequest request, SDKServiceProvider serviceProvider) {
     Map<String, Object> map = new HashMap<String, Object>();
-    map.put("msg", "Hello, world!");
+    map.put("msg", "Hello, world!222");
     map.put("ContactName",  new SugarCRM().getBeanTest() );
     return new ResponseToProcess(HttpURLConnection.HTTP_OK, map);
   }
