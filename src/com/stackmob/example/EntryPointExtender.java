@@ -16,11 +16,11 @@
 
 package com.stackmob.example;
 
-import com.stackmob.core.customcode.CustomCodeMethod;
-import com.stackmob.core.jar.JarEntryObject;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import com.stackmob.core.customcode.CustomCodeMethod;
+import com.stackmob.core.jar.JarEntryObject;
 
 public class EntryPointExtender extends JarEntryObject {
 

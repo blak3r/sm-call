@@ -31,7 +31,7 @@ public class CallinizePush implements CustomCodeMethod {
 
   @Override
   public String getMethodName() {
-    return "callenize";
+    return "callinize";
   }
 
   @Override
@@ -42,7 +42,7 @@ public class CallinizePush implements CustomCodeMethod {
   @Override
   public ResponseToProcess execute(ProcessedAPIRequest request, SDKServiceProvider serviceProvider) {
     Map<String, Object> map = new HashMap<String, Object>();
-    map.put("msg", "Hello, world!");
+    map.put("msg", "Callenizing the World Son...!");
     return new ResponseToProcess(HttpURLConnection.HTTP_OK, map);
   }
 
